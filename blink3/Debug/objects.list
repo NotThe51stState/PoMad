@@ -1,0 +1,4 @@
+"./app/src/main.o"
+"./app/src/stm32f4xx_it.o"
+"./cmsis/device/src/startup_stm32f446xx.o"
+"./cmsis/device/src/system_stm32f4xx.o"
