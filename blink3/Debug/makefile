@@ -65,8 +65,8 @@ all: main-build
 main-build: blink3.elf secondary-outputs
 
 # Tool invocations
-blink3.elf blink3.map: $(OBJS) $(USER_OBJS) C:\STM\PoMad\blink3\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "blink3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\STM\PoMad\blink3\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink3.map" -Wl,--gc-sections -nodefaultlibs -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+blink3.elf blink3.map: $(OBJS) $(USER_OBJS) C:\STM\PoMad\blink3\STM32F091RCTx_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "blink3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\STM\PoMad\blink3\STM32F091RCTx_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink3.map" -Wl,--gc-sections -nodefaultlibs -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
